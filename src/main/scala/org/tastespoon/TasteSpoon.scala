@@ -25,6 +25,7 @@ object TasteSpoon {
 
 trait HttpResponse extends js.Object {
   var statusCode: Int = js.native
+  var headers: js.Dictionary[String] = js.native
 }
 
 class Http private(httpContext: js.Dynamic) {
@@ -34,6 +35,8 @@ class Http private(httpContext: js.Dynamic) {
     Future {
       httpContext.result().then((res: js.Dynamic) => {
         promise.success(res.asInstanceOf[HttpResponse])
+      }).`catch`((err: js.Dynamic) => {
+        promise.failure(err.asInstanceOf[js.JavaScriptException])
       })
     }
     promise.future

@@ -7,5 +7,8 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Rize MISUMI",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "tastespoon": "^0.1.0"
+  }
 }

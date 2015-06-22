@@ -1,6 +1,6 @@
 enablePlugins(ScalaJSPlugin)
 
-name := "Scala.js Tutorial"
+name := "TasteSpoon Scala.js binding sample"
 
 scalaVersion := "2.11.6"
 
